@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*border-bottom: 2px solid #282330;*/
+    padding-bottom: 1rem;
+}
+button {
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background-color: lightskyblue;
+}

@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #433e49;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+.card .content {
+    width: 85%;
+}
+.content small {
+    font-style: italic;
+}
+button {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    cursor: pointer;
+    font-size: 1.75rem;
+    background-color: unset;
+    margin-right: 1.5rem;
+}
+p, small {
+    color: #a8a8a8;
+}
+.card.completed {
+    background-color: #635a6e;
+}
+.card.completed h3 {
+    text-decoration: line-through;
+}
+.card.completed button {
+    border: unset;
+    background-color: lightgreen;
+    color: green;
+}

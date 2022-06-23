@@ -1,0 +1,10 @@
+<div class="card {{ memo.isComplete ? 'completed' : ''}}">
+	<button>
+		<fa-icon [icon]="faCheck" *ngIf="memo.isComplete"></fa-icon>
+	</button>
+	<div class="content">
+		<h3>{{memo.title}}</h3>
+		<p>{{memo.desc}}</p>
+		<small>{{memo.dueDate}}</small>
+	</div>
+</div>

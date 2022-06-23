@@ -1,0 +1,28 @@
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    align-items: center;
+}
+.search {
+    width: 60%;
+    position: relative;
+}
+.search-icon {
+    position: absolute;
+    z-index: 1;
+    top:4px;
+    left: 8px;
+    color: white;
+}
+.search input {
+    width: 90%;
+    padding: 0.5rem 0 0.5rem 2rem;
+    background-color: #433e49;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.filter input {
+    margin-left: .25rem;
+}
