@@ -1,10 +1,16 @@
 <div class="card {{ memo.isComplete ? 'completed' : ''}}">
-	<button>
-		<fa-icon [icon]="faCheck" *ngIf="memo.isComplete"></fa-icon>
-	</button>
-	<div class="content">
-		<h3>{{memo.title}}</h3>
-		<p>{{memo.desc}}</p>
-		<small>{{memo.dueDate}}</small>
-	</div>
+	<div *ngIf="memo.isEditing; then showForm; else showMemo" ></div>
+	<ng-template #showForm>
+		<app-add-memo-form [memo]="memo"></app-add-memo-form>
+	</ng-template>
+	<ng-template #showMemo>
+		<button (click)="setCompletion()">
+			<fa-icon [icon]="faCheck" *ngIf="memo.isComplete"></fa-icon>
+		</button>
+		<div class="content" (click)="toggleEdit()">
+			<h3>{{memo.title}}</h3>
+			<p>{{memo.desc}}</p>
+			<small>{{memo.dueDate | date: 'yyyy-MM-dd'}}</small>
+		</div>
+	</ng-template>
 </div>

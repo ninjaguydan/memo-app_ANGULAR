@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchSortComponent } from './components/search-sort/search-sort.component';
 import { MemoListComponent } from './components/memo-list/memo-list.component';
 import { MemoComponent } from './components/memo/memo.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MemoComponent } from './components/memo/memo.component';
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

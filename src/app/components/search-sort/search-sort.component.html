@@ -1,7 +1,7 @@
 <div class="search-filter">
 	<label class="search">
 		<fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
-		<input>
+		<input [ngModel]="initQuery" (ngModelChange)="onSearch($event)">
 	</label>
 	<label class="filter">
 		Sort by:

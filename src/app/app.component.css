@@ -6,10 +6,6 @@
     border-radius: .5rem;
     padding: 1.5rem;
 }
-button {
-    padding: .75rem 1.75rem;
-    border: none;
-    border-radius: 3px;
-    color: white;
-    background-color: #282330;
+.btn:hover {
+    background-color: #363040;
 }

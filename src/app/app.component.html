@@ -1,7 +1,6 @@
 <div class="container">
-	<app-header></app-header>
-	<app-add-memo-form *ngIf="isMemoFromVisible"></app-add-memo-form>
-	<app-search-sort></app-search-sort>
-	<app-memo-list></app-memo-list>
-	<button>Clear Completed</button>
+	<app-header (onAddEvent)="addEvent()"></app-header>
+	<app-search-sort [initQuery]="query" (searchEvent)="onSearch($event)"></app-search-sort>
+	<app-memo-list [memoList]="results"></app-memo-list>
+	<button class="btn" (click)="clearCompleted()">Clear Completed</button>
 </div>

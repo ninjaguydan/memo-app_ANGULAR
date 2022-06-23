@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { faAdd } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
@@ -7,10 +7,13 @@ import { faAdd } from "@fortawesome/free-solid-svg-icons";
 	styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+	@Output() onAddEvent = new EventEmitter()
 	faAdd = faAdd
 	constructor() { }
 
 	ngOnInit(): void {
 	}
-
+	addEvent(){
+		this.onAddEvent.emit()
+	}
 }

@@ -9,6 +9,7 @@
 }
 .card .content {
     width: 85%;
+    cursor: pointer;
 }
 .content small {
     font-style: italic;
