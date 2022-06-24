@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {faCheck} from "@fortawesome/free-solid-svg-icons";
+import {faCheck, faExclamation} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
 	selector: 'app-memo',
@@ -9,6 +9,7 @@ import {faCheck} from "@fortawesome/free-solid-svg-icons";
 export class MemoComponent implements OnInit {
 	@Input() memo: any
 	faCheck = faCheck
+	faWarning = faExclamation
 
 	constructor() {
 	}

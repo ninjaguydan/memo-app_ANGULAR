@@ -1,5 +1,6 @@
 .card {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     background-color: #433e49;
@@ -37,4 +38,26 @@ p, small {
     border: unset;
     background-color: lightgreen;
     color: green;
+}
+.card .warning {
+    display: none;
+}
+.card.past-due {
+    outline: 2px solid var(--warning);
+}
+.card.past-due small {
+    color: var(--warning);
+}
+.card.past-due .warning {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-color: var(--warning);
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    justify-content: center;
+    z-index: 10;
 }

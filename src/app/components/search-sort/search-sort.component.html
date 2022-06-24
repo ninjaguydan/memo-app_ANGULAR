@@ -1,11 +1,18 @@
 <div class="search-filter">
 	<label class="search">
 		<fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
-		<input [ngModel]="initQuery" (ngModelChange)="onSearch($event)">
+		<input [ngModel]="searchQuery" (ngModelChange)="onSearch($event)">
 	</label>
 	<label class="filter">
 		Sort by:
-		<input type="radio" name="sort" value="Date"> Date
-		<input type="radio" name="sort" value="A-Z"> Title
+		<label>
+			<input type="radio" name='test' value="dueDate" [ngModel]="currentSelection" (ngModelChange)="onSort($event)"/> Date
+		</label>
+
+		<label>
+			<input type="radio" name='test' value="title" [ngModel]="currentSelection" (ngModelChange)="onSort($event)" /> Title
+		</label>
+<!--		<input type="radio" name="sort" value="dueDate" checked> Date-->
+<!--		<input type="radio" name="sort" value="title" > Title-->
 	</label>
 </div>

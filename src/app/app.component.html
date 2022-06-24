@@ -1,6 +1,6 @@
 <div class="container">
-	<app-header (onAddEvent)="addEvent()"></app-header>
-	<app-search-sort [initQuery]="query" (searchEvent)="onSearch($event)"></app-search-sort>
+	<app-header (onAddEvent)="createMemo()"></app-header>
+	<app-search-sort [searchQuery]="query" (searchEvent)="onSearch($event)" [currentSelection]="currentSelection" (sortEvent)="onSort($event)"></app-search-sort>
 	<app-memo-list [memoList]="results"></app-memo-list>
 	<button class="btn" (click)="clearCompleted()">Clear Completed</button>
 </div>

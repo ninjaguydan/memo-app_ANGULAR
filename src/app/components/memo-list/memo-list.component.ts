@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import IReminder from "../../interfaces/IReminder";
 
 @Component({
 	selector: 'app-memo-list',
@@ -6,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 	styleUrls: ['./memo-list.component.css']
 })
 export class MemoListComponent implements OnInit {
-	@Input() memoList:any
+	@Input() memoList!:Array<IReminder>
 
 	constructor() {
 	}

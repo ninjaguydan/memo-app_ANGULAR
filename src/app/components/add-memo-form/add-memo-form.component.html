@@ -1,15 +1,17 @@
 <div class="form">
 	<label>
 		<span class="sr-only">Title</span>
-		<input placeholder="Title" [(ngModel)]="memo.title">
+		<input placeholder="Title" [(ngModel)]="tempMemo.title">
 	</label>
 	<label>
 		<span class="sr-only">Description</span>
-		<textarea rows="3" placeholder="Description" [(ngModel)]="memo.desc"></textarea>
+		<textarea rows="3" placeholder="Description" [(ngModel)]="tempMemo.desc"></textarea>
 	</label>
 	<label class="date">
 		<span class="sr-only">Due</span>
-		<input type="date" name="date" [ngModel]="memo.dueDate | date: 'yyyy-MM-dd'" (ngModelChange)="onDateChange($event)">
+		<input type="date" [ngModel]="tempMemo.dueDate | date: 'yyyy-MM-dd'" (ngModelChange)="onDateChange($event)">
+		<input type="time" [ngModel]="time" (ngModelChange)="onTimeChange($event)">
 	</label>
+	<button class="btn secondary" (click)="onCancel()">Cancel</button>
 	<button class="btn" (click)="saveMemo()">Save</button>
 </div>

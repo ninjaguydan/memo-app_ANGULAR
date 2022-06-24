@@ -9,6 +9,7 @@ import { SearchSortComponent } from './components/search-sort/search-sort.compon
 import { MemoListComponent } from './components/memo-list/memo-list.component';
 import { MemoComponent } from './components/memo/memo.component';
 import {FormsModule} from "@angular/forms";
+import { PastDuePipe } from './customPipes/past-due.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {FormsModule} from "@angular/forms";
     HeaderComponent,
     SearchSortComponent,
     MemoListComponent,
-    MemoComponent
+    MemoComponent,
+    PastDuePipe
   ],
   imports: [
     BrowserModule,

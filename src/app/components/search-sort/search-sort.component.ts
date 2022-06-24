@@ -6,16 +6,18 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 	templateUrl: './search-sort.component.html',
 	styleUrls: ['./search-sort.component.css']
 })
-export class SearchSortComponent implements OnInit {
-	@Input() initQuery:string = ''
+export class SearchSortComponent {
+	@Input() searchQuery!:string
+	@Input() currentSelection!:string
 	@Output() searchEvent = new EventEmitter()
+	@Output() sortEvent = new EventEmitter()
 	faSearch = faSearch
 	constructor() { }
 
-	ngOnInit(): void {
-	}
-
-	onSearch(event:string) :any {
+	onSearch(event:string) :void {
 		this.searchEvent.emit(event)
 	}
+	onSort(event:string):void {
+		this.sortEvent.emit(event)
+}
 }

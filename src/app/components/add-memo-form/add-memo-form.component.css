@@ -24,20 +24,32 @@ input, textarea {
     border-bottom: 2px solid gray;
 }
 label.date {
-    width: 40%;
+    width: 55%;
 }
 input[type=date] {
     color-scheme: dark;
-    width: 80%;
+    width: 45%;
+}
+input[type=time] {
+    color-scheme: dark;
+    width: 40%;
 }
 button {
-    width: 30%;
+    width: 20%;
     background-color: lightskyblue;
     color: black;
-
+    margin-left: .5rem;
 }
 button:hover {
     background-color: #71add2;
+}
+button.secondary {
+    background-color: #635a6e;
+    color: white;
+    margin-left: auto;
+}
+button.secondary:hover {
+    background-color: #524B5AFF;
 }
 .sr-only {
     clip: rect(1px, 1px, 1px, 1px);

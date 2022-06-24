@@ -1,4 +1,5 @@
-<div class="card {{ memo.isComplete ? 'completed' : ''}}">
+<div class="card {{ memo.isComplete ? 'completed' : ''}} {{ memo.dueDate | pastDue: memo.isComplete : memo.isEditing }}">
+	<fa-icon [icon]="faWarning" class="warning"></fa-icon>
 	<div *ngIf="memo.isEditing; then showForm; else showMemo" ></div>
 	<ng-template #showForm>
 		<app-add-memo-form [memo]="memo"></app-add-memo-form>
@@ -10,7 +11,7 @@
 		<div class="content" (click)="toggleEdit()">
 			<h3>{{memo.title}}</h3>
 			<p>{{memo.desc}}</p>
-			<small>{{memo.dueDate | date: 'yyyy-MM-dd'}}</small>
+			<small>{{memo.dueDate | date: 'short'}}</small>
 		</div>
 	</ng-template>
 </div>
